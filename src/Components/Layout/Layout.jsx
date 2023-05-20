@@ -8,6 +8,7 @@ const Layout = () => {
   <StyleBody>
     <Navbar />
   </StyleBody>
+  )
 };
 
 export default Layout;
