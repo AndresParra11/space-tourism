@@ -5,12 +5,9 @@ import Navbar from "../Navbar/Navbar";
 const Layout = () => {
 
   return (
-  <>
   <StyleBody>
     <Navbar />
   </StyleBody>
-  </>
-  );
 };
 
 export default Layout;
