@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
 :root {
     --color-primary: #0B0D17;
     --color-secondary: #D0D6F9;
-    --color-tertiary: #FFFFFF;
+    --  : #FFFFFF;
     --font-primary: 'Barlow Condensed', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 }
