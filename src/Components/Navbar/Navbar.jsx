@@ -1,43 +1,39 @@
 import React from "react";
-import Logo from '../../assets/icon/logo.svg'
-import { StyleButton, StyleHeader, StyleHome, StyleLogo, StyleNav } from "./StyleNavbar";
+import Close from '../../assets/icon/close.svg'
+import { StileMenuContainer, StileMenuLinks, StileMenuLinksItem, StyleClose } from "./StyleNavbar";
+import { StyleNavlink } from "../Layout/StyleLayout";
 
-const Navbar = () => {
-  const links = [
-    {
-      name: "Home",
-      number: "00",
-    },
-    {
-      name: "Destination",
-      number: "01",
-    },
-    {
-      name: "Crew",
-      number: "02",
-    },
-    {
-      name: "Technology",
-      number: "03",
-    }
-  ];
+//El componente 'Navbar' recibe 'handleMenuDisplay' como una 'prop', que es una función proporcionada por el componente padre 'Layout' para controlar la visibilidad del menú.
+const Navbar = ({ handleMenuDisplay }) => {
 
   return (
   <>
-  <StyleHome href="#">Skip to content</StyleHome>
-    <StyleHeader>
-      <StyleLogo>
-        <img src={ Logo } alt="logo" />
-      </StyleLogo>
-      <StyleButton className="mobile-nav-toggle" aria-controls="primary-navigation"><span aria-expanded="false">Menu</span></StyleButton>
-      <StyleNav>
-        <ul id="primary-navigation" data-visible="false">
-          {links.map((item, index) => (
-            <li key={`${item.name}-${index}`}><a href="#"><span>{item.number}</span>{item.name}</a></li>
-          ))}
-        </ul>
-      </StyleNav>
-    </StyleHeader>
+    <StileMenuContainer>
+      <StileMenuLinks>
+        <StyleClose id="close" onClick={handleMenuDisplay}>
+          <img src={Close} alt="close" />
+        </StyleClose>
+        <StileMenuLinksItem  to="/" id="home">
+          <span>00</span>
+          <StyleNavlink>Home</StyleNavlink>
+        </StileMenuLinksItem>
+
+        <StileMenuLinksItem to="/destination" id="destination">
+          <span>01</span>
+          <StyleNavlink>Destination</StyleNavlink>
+        </StileMenuLinksItem>
+
+        <StileMenuLinksItem to="/crew" id="crew">
+          <span>02</span>
+          <StyleNavlink>Crew</StyleNavlink>
+        </StileMenuLinksItem>
+
+        <StileMenuLinksItem to="/technology" id="technology">
+          <span>03</span>
+          <StyleNavlink>Technology</StyleNavlink>
+        </StileMenuLinksItem>
+      </StileMenuLinks>
+    </StileMenuContainer>
   </>
   );
 };
