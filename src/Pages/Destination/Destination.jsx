@@ -2,8 +2,16 @@ import React, { useEffect, useState } from "react";
 // import {useNavigate} from "react-router-dom";
 import planets from "../../data/data.json";
 import DestinationContent from "../../Components/Destination/Destination";
-
-import { StyleBackground, StyleDestinationLeft, StyleDestinationLeftOne, StyleDestinationLeftTwo, StyleDestinationPage, StyleDestinationRight, StyleDestinationRightNav, StyleDestinationRightNavPlanets } from "./StyleDestination";
+import {
+  StyleBackground,
+  StyleDestinationLeft,
+  StyleDestinationLeftOne,
+  StyleDestinationLeftTwo,
+  StyleDestinationPage,
+  StyleDestinationRight,
+  StyleDestinationRightNav,
+  StyleDestinationRightNavPlanets,
+} from "./StyleDestination";
 
 const Destination = () => {
   //Definimos un estado inicial utilizando el hook 'useState'. El estado 'destinationData'
@@ -16,9 +24,8 @@ const Destination = () => {
     travel: planets.destinations[0].travel,
   });
 
-
   //El hook 'useEffect' lo utilizamos para realizar algunas operaciones cuando el componente se monta y desmonta. En este caso, se agrega y se elimina la clase "active" de algunos elementos del DOM. El efecto se ejecuta cuando cambia el estado 'destinationData'
-    useEffect(() => {
+  useEffect(() => {
     // agregamos la clase activa a medida que se carga la página
     let linkItem = document.querySelector("#destination");
     linkItem.classList.add("active");
@@ -34,7 +41,6 @@ const Destination = () => {
       navItem.classList.remove("active");
     };
   }, [destinationData]);
-
 
   //La función 'handleDestinationData' se utiliza para actualizar el estado 'destinationData' con los datos del destino seleccionado. Recibe un objeto 'item' como argumento y actualiza el estado con sus propiedades correspondientes.
   const handleDestinationData = (item) => {
@@ -57,27 +63,27 @@ const Destination = () => {
             <p>Pick your destination</p>
           </StyleDestinationLeftOne>
           <StyleDestinationLeftTwo>
-            <img src={destinationData.image} alt={destinationData.name} />            
+            <img src={destinationData.image} alt={destinationData.name} />
           </StyleDestinationLeftTwo>
         </StyleDestinationLeft>
 
         <StyleDestinationRight>
           <StyleDestinationRightNav>
-          {planets.destinations.map((item) => {
+            {planets.destinations.map((item) => {
               return (
                 <StyleDestinationRightNavPlanets
                   key={item.id}
                   id={item.name.toLowerCase()}
-                  onClick={() => handleDestinationData(item)}>
+                  onClick={() => handleDestinationData(item)}
+                >
                   {item.name}
                 </StyleDestinationRightNavPlanets>
               );
             })}
           </StyleDestinationRightNav>
 
-            {/* Datos del destino Actual */}
+          {/* Datos del destino Actual */}
           <DestinationContent planetData={destinationData} />
-          
         </StyleDestinationRight>
       </StyleDestinationPage>
     </StyleBackground>
@@ -85,6 +91,3 @@ const Destination = () => {
 };
 
 export default Destination;
-
-
-// , { useEffect, useState }
