@@ -4,7 +4,7 @@ import { StyleContainer, StyleNavContainer, StyleLogo, StyleNavLine, StyleNavLin
 import Logo from '../../assets/icon/logo.svg'
 import Hamburguer from '../../assets/icon/hamburguer.svg'
 import Navbar from "../Navbar/Navbar";
-import GlobalStyle from "../App/StylesApp";
+import GlobalStyle from "../../Routes/StylesApp";
 
 const Layout = () => {
 

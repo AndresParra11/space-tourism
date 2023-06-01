@@ -6,7 +6,7 @@ import Destination from "../Pages/Destination/Destination";
 import { StyleRouteContainer } from "./StyleAppRoutes";
 import Crew from "../Pages/Crew/Crew";
 import Technology from "../Pages/Technology/Technology";
-import GlobalStyle from "../Components/App/StylesApp";
+import GlobalStyle from "./StylesApp";
 
 const AppRoutes = () => {
   return (
