@@ -9,7 +9,7 @@ export const Background = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -24,6 +24,10 @@ export const CrewPage = styled.div`
   padding: 20px;
   border-radius: 15px;
   box-sizing: border-box;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const CrewLeft = styled.div`
@@ -67,7 +71,7 @@ export const CrewLeft = styled.div`
   padding: 10%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 3%;
   font-size: 1.5em;
 
     .p{
@@ -84,6 +88,9 @@ export const CrewLeft = styled.div`
     padding: 10%;
   }
 
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 
 `;
 
@@ -110,11 +117,16 @@ margin: 0 15px;
 }
 `;
 
+
 export const CrewRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const CrewRightOne = styled.div`
@@ -122,6 +134,8 @@ export const CrewRightOne = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px; /* Agrega el margen inferior deseado */
+
 
   img{
     width: 70%;
