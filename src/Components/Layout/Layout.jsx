@@ -47,7 +47,7 @@ const Layout = () => {
             <StyleNavlink>Crew</StyleNavlink>
           </StyleNavLinkItem>
 
-          <StyleNavLinkItem>
+          <StyleNavLinkItem to="/technology" id="technology">
             <span>03</span>
             <StyleNavlink>Technology</StyleNavlink>
           </StyleNavLinkItem>
