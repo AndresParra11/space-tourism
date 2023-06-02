@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyleContainer = styled.section`
+font-family: var(--font-primary);
   width: 100%;
   height: 100%;
   overflow: hidden;

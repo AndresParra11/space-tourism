@@ -13,7 +13,7 @@ import {
 import Logo from "../../assets/icon/logo.svg";
 import Hamburguer from "../../assets/icon/hamburguer.svg";
 import Navbar from "../Navbar/Navbar";
-import GlobalStyle from "../App/StylesApp";
+import GlobalStyle from "../../Routes/StylesApp";
 
 const Layout = () => {
   //hacemos uso del hook 'useState' para definir el estado 'showMenu', que controla la visibilidad del menú. El estado se inicializa como 'false', lo que significa que el menú está oculto inicialmente.

@@ -5,8 +5,8 @@ import Home from "../Pages/Home/Home";
 import Destination from "../Pages/Destination/Destination";
 import { StyleRouteContainer } from "./StyleAppRoutes";
 import Crew from "../Pages/Crew/Crew";
+import GlobalStyle from "./StylesApp";
 import Technology from "../Pages/Technology/Technology";
-import GlobalStyle from "../Components/App/StylesApp";
 
 const AppRoutes = () => {
   return (
@@ -15,7 +15,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="destination" element={<Destination />}></Route>
+          <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />} />
         </Route>

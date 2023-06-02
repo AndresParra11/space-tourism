@@ -40,6 +40,14 @@ body {
   height: 100%;
 }
 
+.activate{
+  background-color: #fff;
+}
+
+.activate span {
+  color: #0b0d17;
+}
+
 .active {
   border-bottom: 3px solid #fff;
 }
