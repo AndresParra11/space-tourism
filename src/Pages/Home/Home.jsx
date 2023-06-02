@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ContainerImagenHome,
   ContainerInfoHome,
@@ -18,6 +18,16 @@ const Home = () => {
   const handleContinue = () => {
     navigate("/destination");
   };
+
+    useEffect(() => {
+    let linkItem = document.querySelector("#home");
+    linkItem.classList.add("active");
+
+    return () => {
+      linkItem.classList.remove("active");
+    };
+  }, []);
+
 
   return (
     <>
