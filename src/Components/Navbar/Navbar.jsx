@@ -13,22 +13,22 @@ const Navbar = ({ handleMenuDisplay }) => {
         <StyleClose id="close" onClick={handleMenuDisplay}>
           <img src={Close} alt="close" />
         </StyleClose>
-        <StileMenuLinksItem  to="/" id="home">
+        <StileMenuLinksItem hrefLang="#"  to="/" id="home">
           <span>00</span>
           <StyleNavlink>Home</StyleNavlink>
         </StileMenuLinksItem>
 
-        <StileMenuLinksItem to="/destination" id="destination">
+        <StileMenuLinksItem  hrefLang="#" to="/destination" id="destination">
           <span>01</span>
           <StyleNavlink>Destination</StyleNavlink>
         </StileMenuLinksItem>
 
-        <StileMenuLinksItem to="/crew" id="crew">
+        <StileMenuLinksItem  hrefLang="#" to="/crew" id="crew">
           <span>02</span>
           <StyleNavlink>Crew</StyleNavlink>
         </StileMenuLinksItem>
 
-        <StileMenuLinksItem to="/technology" id="technology">
+        <StileMenuLinksItem  hrefLang="#" to="/technology" id="technology">
           <span>03</span>
           <StyleNavlink>Technology</StyleNavlink>
         </StileMenuLinksItem>
