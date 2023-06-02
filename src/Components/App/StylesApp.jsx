@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     --color-terciary: #FFFFFF;
     --font-primary: 'Barlow Condensed', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
+    --font-terciary: 'Bellefair', serif;
+    --font-fourth: 'Barlow', serif;
 }
 
 * {
