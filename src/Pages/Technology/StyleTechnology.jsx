@@ -233,7 +233,6 @@ export const StyleTechRight = styled.div`
     display: block;
     width: 80%;
     height: 50rem;
-    margin-left: auto;
   }
 
   @media only screen and (max-width: 1000px) {
